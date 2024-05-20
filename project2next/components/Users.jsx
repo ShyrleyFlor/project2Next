@@ -5,13 +5,12 @@ import Link from "next/link";
 function Users({ users }) {
   return (
     <ul>
-      <h1 className="font-bold text-3xl text-center">Users</h1>
+      <h1 className="font-bold text-3xl text-center p-2">Users</h1>
       {users.map((user) => (
         <Link key={user.id} href={`/users/${user.id}`}>
           <li
             key={user.id}
             className="bg-slate-400 mb-2 p-4 rounded-md text-black flex justify-between"
-            onClick={() => alert(user.id)}
           >
             <div>
               <h5 className="font-bold">
